@@ -23,13 +23,16 @@ const AddQuestionPage = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof questionSchema>) {
-    console.log(values);
+  function onSubmitDraft(values: z.infer<typeof questionSchema>) {
+    console.log("Submit Draft",values);
+  }
+  function onSubmitPublish(values: z.infer<typeof questionSchema>) {
+    console.log("Submit Publish",values);
   }
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form className="space-y-8">
         <FormField
           control={form.control}
           name="question"
@@ -143,10 +146,10 @@ const AddQuestionPage = () => {
           )}
         />
         <div className="flex gap-2 flex-grow justify-end">
-          <Button type="submit" variant="flat" color="primary">
+          <Button type="button" onPress={()=>form.handleSubmit(onSubmitDraft)()} variant="flat" color="primary">
             Save as Draft
           </Button>
-          <Button type="submit" color="primary">
+          <Button type="button" onPress={()=>form.handleSubmit(onSubmitPublish)()} color="primary">
             Publish
           </Button>
         </div>
