@@ -120,7 +120,8 @@ const AddQuestionPage = () => {
             <Checkbox 
               color="default" 
               radius="sm"
-              onValueChange={() => field.value = !field.value}
+              isSelected={field.value}
+              onChange={(e) => form.setValue("isMultiChoice", e.target.checked)}
               className="px-4"
             >
               <span className="text-gray-700 font-medium dark:text-gray-300">
