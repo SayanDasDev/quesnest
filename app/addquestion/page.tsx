@@ -18,7 +18,6 @@ const AddQuestionPage = () => {
     defaultValues: {
       question: "",
       explanation: "",
-      isMultiChoice: false,
       options: [{ option: "" }, { option: "" }]
     },
   });
@@ -32,7 +31,7 @@ const AddQuestionPage = () => {
 
   const addOption = () => {
     if (fields.length < MAX_OPTIONS) {
-      append({ option: "" });
+      append({ option: "", isCorrect: false });
     }
   };
 
@@ -103,23 +102,6 @@ const AddQuestionPage = () => {
         </div>
         <FormField
           control={form.control}
-          name="isMultiChoice"
-          render={({ field, fieldState }) => (
-            <Checkbox
-              color="default"
-              radius="sm"
-              isSelected={field.value}
-              onChange={(e) => form.setValue("isMultiChoice", e.target.checked)}
-              className="px-4"
-            >
-              <span className="text-gray-700 font-medium dark:text-gray-300">
-                This is a Multiple Choice Question
-              </span>
-            </Checkbox>
-          )}
-        />
-        <FormField
-          control={form.control}
           name="explanation"
           render={({ field, fieldState }) => (
             <Textarea
@@ -135,7 +117,7 @@ const AddQuestionPage = () => {
           )}
         />
         <div className="flex gap-2 flex-grow justify-end">
-          <Button type="button" variant="flat" color="danger">
+          <Button type="button" variant="light" color="danger">
             Discard
           </Button>
           <Button

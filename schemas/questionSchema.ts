@@ -5,7 +5,8 @@ export const MAX_OPTIONS = 10;
 const optionSchema = z.object({
   option: z.string().min(1, {
     message: "This Option is required",
-  })
+  }),
+  isCorrect: z.boolean().default(false),
 });
 
 export const questionSchema = z
@@ -17,8 +18,6 @@ export const questionSchema = z
     explanation: z.string().refine((value) => value.length === 0 || value.length >= 10, {
       message: "Explanation should have minimum 10 characters",
     }),
-
-    isMultiChoice: z.boolean().optional().default(false),
 
     options: z.array(optionSchema).min(2).max(MAX_OPTIONS),
   });
