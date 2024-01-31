@@ -304,6 +304,20 @@
     "@react-types/checkbox" "^3.5.2"
     "@react-types/shared" "^3.21.0"
 
+"@nextui-org/chip@^2.0.25":
+  version "2.0.25"
+  resolved "https://registry.yarnpkg.com/@nextui-org/chip/-/chip-2.0.25.tgz#56ba55c938e7c2cbeac62c34250a74aa81a827a3"
+  integrity sha512-hfVSaq5JWzGn97s3K2Ac/xOopHWelaUW3eus0O0wns/6+NCI0QUjgwNt2bAQSNvnE6vjvYLJTqGG/jFHyFJjOg==
+  dependencies:
+    "@nextui-org/react-utils" "2.0.10"
+    "@nextui-org/shared-icons" "2.0.6"
+    "@nextui-org/shared-utils" "2.0.4"
+    "@nextui-org/use-aria-press" "2.0.1"
+    "@react-aria/focus" "^3.14.3"
+    "@react-aria/interactions" "^3.19.1"
+    "@react-aria/utils" "^3.21.1"
+    "@react-types/checkbox" "^3.5.2"
+
 "@nextui-org/code@2.0.24":
   version "2.0.24"
   resolved "https://registry.yarnpkg.com/@nextui-org/code/-/code-2.0.24.tgz#421361189063edc3db2a0ea29de01a0e04d6ec61"
@@ -406,6 +420,27 @@
     "@react-stately/tree" "^3.7.3"
     "@react-types/menu" "^3.9.5"
     "@react-types/shared" "^3.21.0"
+
+"@nextui-org/modal@^2.0.28":
+  version "2.0.28"
+  resolved "https://registry.yarnpkg.com/@nextui-org/modal/-/modal-2.0.28.tgz#0014c4d10f05e4b67d90d131af254bef7cd4f102"
+  integrity sha512-unfP0EMF3FDg5CkRqou03s4/BopWbaBTeVIMZeA2A1WF5teHUOmpLdp44Z1KOoWB1RVMDVd4JeoauNHNhJMp0g==
+  dependencies:
+    "@nextui-org/framer-transitions" "2.0.15"
+    "@nextui-org/react-utils" "2.0.10"
+    "@nextui-org/shared-icons" "2.0.6"
+    "@nextui-org/shared-utils" "2.0.4"
+    "@nextui-org/use-aria-button" "2.0.6"
+    "@nextui-org/use-aria-modal-overlay" "2.0.6"
+    "@nextui-org/use-disclosure" "2.0.6"
+    "@react-aria/dialog" "^3.5.7"
+    "@react-aria/focus" "^3.14.3"
+    "@react-aria/interactions" "^3.19.1"
+    "@react-aria/overlays" "^3.18.1"
+    "@react-aria/utils" "^3.21.1"
+    "@react-stately/overlays" "^3.6.3"
+    "@react-types/overlays" "^3.8.3"
+    react-remove-scroll "^2.5.6"
 
 "@nextui-org/navbar@2.0.27":
   version "2.0.27"
@@ -591,6 +626,16 @@
     "@react-types/link" "^3.5.1"
     "@react-types/shared" "^3.21.0"
 
+"@nextui-org/use-aria-modal-overlay@2.0.6":
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/@nextui-org/use-aria-modal-overlay/-/use-aria-modal-overlay-2.0.6.tgz#f267fa80143d098e1e625aea3bf224c095fc3467"
+  integrity sha512-JfhXvH2RObWpHeLmxdIBDPF2SDzV4SqBvEh01yRvg/EuZ3HDRfCnTDh+5HD0ziUVdk/kWuy/hZLX59sMX7QHWA==
+  dependencies:
+    "@react-aria/overlays" "^3.18.1"
+    "@react-aria/utils" "^3.21.1"
+    "@react-stately/overlays" "^3.6.3"
+    "@react-types/shared" "^3.21.0"
+
 "@nextui-org/use-aria-press@2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@nextui-org/use-aria-press/-/use-aria-press-2.0.1.tgz#b703cc546187637ef2a0c58616cc5a69654abb05"
@@ -612,10 +657,26 @@
     "@react-types/button" "^3.9.0"
     "@react-types/shared" "^3.21.0"
 
+"@nextui-org/use-callback-ref@2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@nextui-org/use-callback-ref/-/use-callback-ref-2.0.4.tgz#6706329f7e79282624c4b88e542a53747e592122"
+  integrity sha512-GF50SzOFU/R0gQT1TmjbEUiS8CQ87qiV5Rp/TD5pqys1xprVgGLUUNQzlh+YDS2JHNu5FGlZc4sJKhtf2xF5aw==
+  dependencies:
+    "@nextui-org/use-safe-layout-effect" "2.0.4"
+
 "@nextui-org/use-clipboard@2.0.4":
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@nextui-org/use-clipboard/-/use-clipboard-2.0.4.tgz#49439ca60368fc70711b4b3ded019c745f38f1ec"
   integrity sha512-rMcaX0QsolOJ1BQbp1T/FVsSPn2m0Ss4Z+bbdS7eM6EFKtJdVJWlpbrST0/kR2UcW1KWeK27NYmtNPF5+hgZMA==
+
+"@nextui-org/use-disclosure@2.0.6":
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/@nextui-org/use-disclosure/-/use-disclosure-2.0.6.tgz#42bfba68af502e22b0cf5ccac0c5d4db87c3130f"
+  integrity sha512-pazzLsAGKjUD4cMVySTivItmIgpsfIf4baP/02K0Xc8tbFAH4K1n7cUnEEjs+MTXy1Bprvz3pfAHDGZRDI1yYg==
+  dependencies:
+    "@nextui-org/use-callback-ref" "2.0.4"
+    "@react-aria/utils" "^3.21.1"
+    "@react-stately/utils" "^3.8.0"
 
 "@nextui-org/use-is-mobile@2.0.6":
   version "2.0.6"
@@ -623,6 +684,11 @@
   integrity sha512-HeglWUoq6Ln8P5n6s1SZvBRatLYMKsiXQM7Mk2l+6jFByzZh3VWtZ05xmuX8te/1rGmeUxjeXtW6x+F7/f/JoA==
   dependencies:
     "@react-aria/ssr" "^3.8.0"
+
+"@nextui-org/use-safe-layout-effect@2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@nextui-org/use-safe-layout-effect/-/use-safe-layout-effect-2.0.4.tgz#92652ea61ab94abf494c98c581297769cc8f29e0"
+  integrity sha512-K7ppEhTfzdVOzbgKaNFEBi4HwRfQ8j+kRBQqsU5yo8bSM+5uv8OUy/mjpEf4i02PUDIBmsgJC4En9S537DXrwg==
 
 "@nextui-org/use-scroll-position@2.0.4":
   version "2.0.4"

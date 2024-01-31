@@ -4,13 +4,13 @@ import { Form, FormField } from "@/components/form";
 import { MAX_OPTIONS, questionSchema } from "@/schemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@nextui-org/button";
-import { Checkbox } from "@nextui-org/checkbox";
+import { Chip } from "@nextui-org/chip";
 import { Input, Textarea } from "@nextui-org/input";
 import { Switch } from "@nextui-org/switch";
 import { Check, Plus, X } from "lucide-react";
-import { useState } from "react";
 import { useFieldArray, useForm } from "react-hook-form";
 import { z } from "zod";
+import ErrorModal from "./ErrorModal";
 
 const AddQuestionPage = () => {
 
@@ -30,6 +30,7 @@ const AddQuestionPage = () => {
     name: "options",
   });
 
+
   const addOption = () => {
     if (fields.length < MAX_OPTIONS) {
       append({ option: "", isCorrect: false });
@@ -42,6 +43,12 @@ const AddQuestionPage = () => {
   function onSubmitPublish(values: z.infer<typeof questionSchema>) {
     console.log("Submit Publish", values);
   }
+  async function handleDiscard() {
+    // await form.handleSubmit(() => {})();
+    // console.log("Validation errors:", form.formState.errors);
+  }
+
+  const optionErrors = form.formState.errors.options?.root;
 
   return (
     <Form {...form}>
@@ -65,7 +72,10 @@ const AddQuestionPage = () => {
             />
           )}
         />
-
+        {optionErrors &&
+          <Chip variant="flat" color="danger" className="h-14 rounded-xl w-full px-6 mx-3 whitespace-normal truncate" >{optionErrors?.message}</Chip>
+          // <ErrorModal /> 
+        }
         <div className="px-3 grid gap-x-6 gap-y-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
           {options.map((option, index) => (
             <div className="flex gap-2" key={index}>
@@ -86,13 +96,16 @@ const AddQuestionPage = () => {
                 />
               )}
             />
+            <div className="h-14 flex items-center">
             <FormField
               control={form.control}
               name={`options.${index}.isCorrect`}
-              render={({ field, fieldState }) => (
+              render={({ field }) => (
                 <Switch
                   isSelected={field.value}
-                  onValueChange={(value) => form.setValue(`options.${index}.isCorrect`, value)}
+                  onValueChange={(value) => {
+                    form.setValue(`options.${index}.isCorrect`, value);
+                  }}
                   size="lg"
                   color="success"
                   startContent={<Check strokeWidth={4}/>}
@@ -100,6 +113,7 @@ const AddQuestionPage = () => {
               />
               )}
             />
+            </div>
             </div>
           ))}
           {options.length < MAX_OPTIONS && (
@@ -110,7 +124,7 @@ const AddQuestionPage = () => {
               size="lg"
               color="default"
               className="h-14"
-              onClick={() => addOption()}
+              onPress={() => addOption()}
             >
               Add Option
             </Button>
@@ -133,7 +147,12 @@ const AddQuestionPage = () => {
           )}
         />
         <div className="flex gap-2 flex-grow justify-end">
-          <Button type="button" variant="light" color="danger">
+          <Button 
+            type="button" 
+            variant="light" 
+            color="danger" 
+            onPress={(handleDiscard)}
+          >
             Discard
           </Button>
           <Button
