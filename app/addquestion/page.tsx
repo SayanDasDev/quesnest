@@ -7,7 +7,7 @@ import { Button } from "@nextui-org/button";
 import { Chip } from "@nextui-org/chip";
 import { Input, Textarea } from "@nextui-org/input";
 import { Switch } from "@nextui-org/switch";
-import { Check, Plus, X } from "lucide-react";
+import { Check, Plus, Trash, X } from "lucide-react";
 import { useFieldArray, useForm } from "react-hook-form";
 import { z } from "zod";
 import ErrorModal from "./ErrorModal";
@@ -19,13 +19,13 @@ const AddQuestionPage = () => {
     defaultValues: {
       question: "",
       explanation: "",
-      options: [{ option: "", isCorrect: false }, { option: "", isCorrect: false }]
+      options: [{ option: "", isCorrect: false, id: "A" }, { option: "", isCorrect: false, id: "B" }]
     },
   });
 
   const options = form.getValues("options");
 
-  const { fields, append } = useFieldArray({
+  const { fields, append, remove } = useFieldArray({
     control: form.control,
     name: "options",
   });
@@ -33,7 +33,8 @@ const AddQuestionPage = () => {
 
   const addOption = () => {
     if (fields.length < MAX_OPTIONS) {
-      append({ option: "", isCorrect: false });
+      const id = String.fromCharCode(65 + fields.length);
+      append({ option: "", isCorrect: false, id });
     }
   };
 
@@ -41,7 +42,7 @@ const AddQuestionPage = () => {
     console.log("Submit Draft", values);
   }
   function onSubmitPublish(values: z.infer<typeof questionSchema>) {
-    console.log("Submit Publish", values);
+    console.log(JSON.stringify(values));
   }
   async function handleDiscard() {
     // await form.handleSubmit(() => {})();
@@ -77,8 +78,23 @@ const AddQuestionPage = () => {
           // <ErrorModal /> 
         }
         <div className="px-3 grid gap-x-6 gap-y-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
-          {options.map((option, index) => (
-            <div className="flex gap-2" key={index}>
+          {options.map((field, index) => (
+            <div className="flex gap-2" key={field.id}>
+              {index > 1 && (
+            <div className="h-14 flex items-center">
+
+              <Button
+                type="button"
+                isIconOnly
+                variant="light"
+                size="sm"
+                color="danger"
+                onPress={() => remove(index)}
+              >
+                <X />
+              </Button>
+              </div>
+            )}
             <FormField
               control={form.control}
               name={`options.${index}.option`}

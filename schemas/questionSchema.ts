@@ -7,6 +7,7 @@ const optionSchema = z.object({
     message: "This Option is required",
   }),
   isCorrect: z.boolean().default(false),
+  id: z.string(),
 });
 
 export const questionSchema = z
