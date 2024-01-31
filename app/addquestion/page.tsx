@@ -6,7 +6,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@nextui-org/button";
 import { Checkbox } from "@nextui-org/checkbox";
 import { Input, Textarea } from "@nextui-org/input";
-import { Plus } from "lucide-react";
+import { Switch } from "@nextui-org/switch";
+import { Check, Plus, X } from "lucide-react";
 import { useState } from "react";
 import { useFieldArray, useForm } from "react-hook-form";
 import { z } from "zod";
@@ -18,7 +19,7 @@ const AddQuestionPage = () => {
     defaultValues: {
       question: "",
       explanation: "",
-      options: [{ option: "" }, { option: "" }]
+      options: [{ option: "", isCorrect: false }, { option: "", isCorrect: false }]
     },
   });
 
@@ -67,8 +68,8 @@ const AddQuestionPage = () => {
 
         <div className="px-3 grid gap-x-6 gap-y-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
           {options.map((option, index) => (
+            <div className="flex gap-2" key={index}>
             <FormField
-              key={index}
               control={form.control}
               name={`options.${index}.option`}
               render={({ field, fieldState }) => (
@@ -77,7 +78,7 @@ const AddQuestionPage = () => {
                   autoComplete="off"
                   variant="flat"
                   isInvalid={fieldState.error && true}
-                  label={String.fromCharCode(65 + index)} // A, B, C, ...
+                  label={`Option ${String.fromCharCode(65 + index)}`} 
                   errorMessage={fieldState.error?.message}
                   className=""
                   size="md"
@@ -85,6 +86,21 @@ const AddQuestionPage = () => {
                 />
               )}
             />
+            <FormField
+              control={form.control}
+              name={`options.${index}.isCorrect`}
+              render={({ field, fieldState }) => (
+                <Switch
+                  isSelected={field.value}
+                  onValueChange={(value) => form.setValue(`options.${index}.isCorrect`, value)}
+                  size="lg"
+                  color="success"
+                  startContent={<Check strokeWidth={4}/>}
+                  endContent={<X strokeWidth={4}/>}
+              />
+              )}
+            />
+            </div>
           ))}
           {options.length < MAX_OPTIONS && (
             <Button

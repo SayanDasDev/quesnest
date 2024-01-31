@@ -500,7 +500,7 @@
     "@nextui-org/shared-utils" "2.0.4"
     "@nextui-org/system-rsc" "2.0.11"
 
-"@nextui-org/switch@2.0.25":
+"@nextui-org/switch@^2.0.25":
   version "2.0.25"
   resolved "https://registry.yarnpkg.com/@nextui-org/switch/-/switch-2.0.25.tgz#6ae65dbdbeebcb3a5fa1d12c7101827a4af7c735"
   integrity sha512-U7g68eReMSkgG0bBOSdzRLK+npv422YK6WYHpYOSkEBDqGwQ7LCeMRQreT/KxN0QFxIKmafebdLHAbuKc/X+5Q==
