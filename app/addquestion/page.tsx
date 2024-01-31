@@ -7,10 +7,9 @@ import { Button } from "@nextui-org/button";
 import { Chip } from "@nextui-org/chip";
 import { Input, Textarea } from "@nextui-org/input";
 import { Switch } from "@nextui-org/switch";
-import { Check, Plus, Trash, X } from "lucide-react";
+import { AlertCircle, Check, Plus, X } from "lucide-react";
 import { useFieldArray, useForm } from "react-hook-form";
 import { z } from "zod";
-import ErrorModal from "./ErrorModal";
 
 const AddQuestionPage = () => {
 
@@ -45,8 +44,8 @@ const AddQuestionPage = () => {
     console.log(JSON.stringify(values));
   }
   async function handleDiscard() {
-    // await form.handleSubmit(() => {})();
-    // console.log("Validation errors:", form.formState.errors);
+    await form.handleSubmit(() => {})();
+    console.log("Validation errors:", form.formState.errors);
   }
 
   const optionErrors = form.formState.errors.options?.root;
@@ -74,13 +73,13 @@ const AddQuestionPage = () => {
           )}
         />
         {optionErrors &&
-          <Chip variant="flat" color="danger" className="h-14 rounded-xl w-full px-6 mx-3 whitespace-normal truncate" >{optionErrors?.message}</Chip>
+          <Chip variant="flat" startContent={<AlertCircle />} color="danger" className="h-14 rounded-xl w-full px-6 mx-3 whitespace-normal truncate" ><div className="pl-2 inline-block">{optionErrors.message}</div></Chip>
           // <ErrorModal /> 
         }
         <div className="px-3 grid gap-x-6 gap-y-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
           {options.map((field, index) => (
             <div className="flex gap-2" key={field.id}>
-              {index > 1 && (
+              {fields.length > 2 && (
             <div className="h-14 flex items-center">
 
               <Button
@@ -121,6 +120,7 @@ const AddQuestionPage = () => {
                   isSelected={field.value}
                   onValueChange={(value) => {
                     form.setValue(`options.${index}.isCorrect`, value);
+                    form.trigger(`options`);
                   }}
                   size="lg"
                   color="success"
