@@ -286,6 +286,21 @@
     "@react-types/button" "^3.9.0"
     "@react-types/shared" "^3.21.0"
 
+"@nextui-org/card@^2.0.24":
+  version "2.0.24"
+  resolved "https://registry.yarnpkg.com/@nextui-org/card/-/card-2.0.24.tgz#e57764fa91a0711221d32e9d5481d9df902ef9ec"
+  integrity sha512-16uAS0i6+EO+u8aqtmaCXatjovsyuTq51JwCLBlB67OldfgXoYcYl3GaE2VoZdEwxVu1G/qypDfXv29k46nZuA==
+  dependencies:
+    "@nextui-org/react-utils" "2.0.10"
+    "@nextui-org/ripple" "2.0.24"
+    "@nextui-org/shared-utils" "2.0.4"
+    "@nextui-org/use-aria-button" "2.0.6"
+    "@react-aria/button" "^3.8.4"
+    "@react-aria/focus" "^3.14.3"
+    "@react-aria/interactions" "^3.19.1"
+    "@react-aria/utils" "^3.21.1"
+    "@react-types/shared" "^3.21.0"
+
 "@nextui-org/checkbox@^2.0.25":
   version "2.0.25"
   resolved "https://registry.yarnpkg.com/@nextui-org/checkbox/-/checkbox-2.0.25.tgz#d4a412d30ea87faef69152f5187cc76e9a32852f"
@@ -327,7 +342,7 @@
     "@nextui-org/shared-utils" "2.0.4"
     "@nextui-org/system-rsc" "2.0.11"
 
-"@nextui-org/divider@2.0.25":
+"@nextui-org/divider@2.0.25", "@nextui-org/divider@^2.0.25":
   version "2.0.25"
   resolved "https://registry.yarnpkg.com/@nextui-org/divider/-/divider-2.0.25.tgz#3c156552ad38e506b91f8f3dd023b3490a260f08"
   integrity sha512-yEvHqYlhNBwmF68pfjJKdzC8gVQtL+txxD5COBGF9uFyfxA5hVw2D6GmYgOH514bxrFBuWOLcQX6gyljgcN3bA==
@@ -480,6 +495,23 @@
     "@react-types/button" "^3.9.0"
     "@react-types/overlays" "^3.8.3"
     react-remove-scroll "^2.5.6"
+
+"@nextui-org/radio@^2.0.25":
+  version "2.0.25"
+  resolved "https://registry.yarnpkg.com/@nextui-org/radio/-/radio-2.0.25.tgz#694ea70cf1f849c4e892ab5aa2f2ee672042d7e4"
+  integrity sha512-vRX0ppM5Tlzu0HoqTG6LdmQnMjk8RRl66BH1+QaosvZRXA1iIdA3BduqQYqn5ZZHBBlJ2u9QzaD3lTAlWIHvNg==
+  dependencies:
+    "@nextui-org/react-utils" "2.0.10"
+    "@nextui-org/shared-utils" "2.0.4"
+    "@nextui-org/use-aria-press" "2.0.1"
+    "@react-aria/focus" "^3.14.3"
+    "@react-aria/interactions" "^3.19.1"
+    "@react-aria/radio" "^3.8.2"
+    "@react-aria/utils" "^3.21.1"
+    "@react-aria/visually-hidden" "^3.8.6"
+    "@react-stately/radio" "^3.9.1"
+    "@react-types/radio" "^3.5.2"
+    "@react-types/shared" "^3.21.0"
 
 "@nextui-org/react-rsc-utils@2.0.10":
   version "2.0.10"
@@ -865,6 +897,22 @@
     "@react-types/shared" "^3.22.0"
     "@swc/helpers" "^0.5.0"
 
+"@react-aria/radio@^3.8.2":
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/@react-aria/radio/-/radio-3.10.0.tgz#8c17fe18a499fc06303329e674e0f06b47ceb411"
+  integrity sha512-6NaKzdGymdcVWLYgHT0cHsVmNzPOp89o8r41w29OPBQWu8w2c9mxg4366OiIZn/uXIBS4abhQ4nL4toBRLgBrg==
+  dependencies:
+    "@react-aria/focus" "^3.16.0"
+    "@react-aria/form" "^3.0.1"
+    "@react-aria/i18n" "^3.10.0"
+    "@react-aria/interactions" "^3.20.1"
+    "@react-aria/label" "^3.7.4"
+    "@react-aria/utils" "^3.23.0"
+    "@react-stately/radio" "^3.10.1"
+    "@react-types/radio" "^3.7.0"
+    "@react-types/shared" "^3.22.0"
+    "@swc/helpers" "^0.5.0"
+
 "@react-aria/selection@^3.17.3":
   version "3.17.3"
   resolved "https://registry.yarnpkg.com/@react-aria/selection/-/selection-3.17.3.tgz#ed4b3c51cc9abc72ad19d6beb536b194db1cbd7d"
@@ -1002,6 +1050,17 @@
     "@react-types/overlays" "^3.8.4"
     "@swc/helpers" "^0.5.0"
 
+"@react-stately/radio@^3.10.1", "@react-stately/radio@^3.9.1":
+  version "3.10.1"
+  resolved "https://registry.yarnpkg.com/@react-stately/radio/-/radio-3.10.1.tgz#d3d8bdcd6f1d9385b581094a7f2dab6836f7f229"
+  integrity sha512-MsBYbcLCvjKsqTAKe43T681F2XwKMsS7PLG0eplZgWP9210AMY78GeY1XPYZKHPAau8XkbYiuJqbqTerIJ3DBw==
+  dependencies:
+    "@react-stately/form" "^3.0.0"
+    "@react-stately/utils" "^3.9.0"
+    "@react-types/radio" "^3.7.0"
+    "@react-types/shared" "^3.22.0"
+    "@swc/helpers" "^0.5.0"
+
 "@react-stately/selection@^3.14.2":
   version "3.14.2"
   resolved "https://registry.yarnpkg.com/@react-stately/selection/-/selection-3.14.2.tgz#6a3d5b59db951c34d04494b28373f4fe8ce6f581"
@@ -1089,6 +1148,13 @@
   version "3.8.4"
   resolved "https://registry.yarnpkg.com/@react-types/overlays/-/overlays-3.8.4.tgz#a538f6f2fb9826f1da78d3b4f0f6326a709ce37d"
   integrity sha512-pfgNlQnbF6RB/R2oSxyqAP3Uzz0xE/k5q4n5gUeCDNLjY5qxFHGE8xniZZ503nZYw6VBa9XMN1efDOKQyeiO0w==
+  dependencies:
+    "@react-types/shared" "^3.22.0"
+
+"@react-types/radio@^3.5.2", "@react-types/radio@^3.7.0":
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/@react-types/radio/-/radio-3.7.0.tgz#4610fc7f97f6ed1d54a4d314717e3605c4422fac"
+  integrity sha512-EcwGAXzSHjSqpFZha7xn3IUrhPiJLj+0yb1Ip0qPmhWz0VVw2DwrkY7q/jfaKroVvQhTo2TbfGhcsAQrt0fRqg==
   dependencies:
     "@react-types/shared" "^3.22.0"
 

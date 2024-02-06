@@ -52,6 +52,8 @@ const AddQuestionPage = () => {
   }
   function onSubmitPublish(values: z.infer<typeof questionSchema>) {
     console.log("Submit Publish", values);
+    const stringValues = JSON.stringify(values);
+    console.log(stringValues);
     form.reset();
   }
   async function handleDiscard() {
@@ -66,13 +68,18 @@ const AddQuestionPage = () => {
   );
 
   const handleSelectionChange = (selection: Selection) => {
-  if (typeof selection === 'string') {
-    setSelectedOption(new Set([selection]));
-  } else if (selection instanceof Set) {
-    setSelectedOption(new Set(Array.from(selection).filter((key): key is string => typeof key === 'string')));
-  }
-};
-  
+    if (typeof selection === "string") {
+      setSelectedOption(new Set([selection]));
+    } else if (selection instanceof Set) {
+      setSelectedOption(
+        new Set(
+          Array.from(selection).filter(
+            (key): key is string => typeof key === "string"
+          )
+        )
+      );
+    }
+  };
 
   const labelsMap: { [key: string]: string } = {
     publish: "Publish",
@@ -81,13 +88,13 @@ const AddQuestionPage = () => {
 
   const selectedOptionValue = Array.from(selectedOption)[0];
 
-const onSubmit = () => {
-  if (selectedOptionValue === "publish") {
-    form.handleSubmit(onSubmitPublish)();
-  } else if (selectedOptionValue === "draft") {
-    form.handleSubmit(onSubmitDraft)();
-  }
-};
+  const onSubmit = () => {
+    if (selectedOptionValue === "publish") {
+      form.handleSubmit(onSubmitPublish)();
+    } else if (selectedOptionValue === "draft") {
+      form.handleSubmit(onSubmitDraft)();
+    }
+  };
 
   return (
     <Form {...form}>
@@ -111,18 +118,16 @@ const onSubmit = () => {
             />
           )}
         />
-        {
-          optionErrors && (
-            <Chip
-              variant="flat"
-              startContent={<AlertCircle />}
-              color="danger"
-              className="h-14 rounded-xl w-full px-6 mx-3 whitespace-normal truncate"
-            >
-              <div className="pl-2 inline-block">{optionErrors.message}</div>
-            </Chip>
-          )
-        }
+        {optionErrors && (
+          <Chip
+            variant="flat"
+            startContent={<AlertCircle />}
+            color="danger"
+            className="h-14 rounded-xl w-full px-6 mx-3 whitespace-normal truncate"
+          >
+            <div className="pl-2 inline-block">{optionErrors.message}</div>
+          </Chip>
+        )}
         <div className="px-3 grid gap-x-6 gap-y-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
           {options.map((field, index) => (
             <div className="flex gap-2" key={field.id}>
@@ -218,7 +223,9 @@ const onSubmit = () => {
             Discard
           </Button>
           <ButtonGroup variant="solid" color="primary">
-            <Button className="font-semibold" type="button" onPress={onSubmit}>{labelsMap[selectedOptionValue]}</Button>
+            <Button className="font-semibold" type="button" onPress={onSubmit}>
+              {labelsMap[selectedOptionValue]}
+            </Button>
             <Dropdown placement="bottom-end">
               <DropdownTrigger>
                 <Button isIconOnly>

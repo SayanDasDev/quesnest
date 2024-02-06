@@ -25,6 +25,13 @@ export default function Home() {
 				<Link
 					isExternal
 					href={'/addquestion'}
+					className={buttonStyles({ color: "primary", size:"lg", radius: "full", variant: "bordered", })}
+				>
+					<span className="text-lg font-bold tracking-wide">Add Qustion</span>
+				</Link>
+				<Link
+					isExternal
+					href={'/explore'}
 					className={buttonStyles({ color: "primary", size:"lg", radius: "full", variant: "shadow", })}
 				>
 					<span className="text-lg font-bold tracking-wide">Explore</span>

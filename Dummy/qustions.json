@@ -1,0 +1,206 @@
+[
+  {
+    "question": "Lorem quis accusamus",
+    "explanation": "Harum lorem quia ani",
+    "options": [
+      { "option": "Maiores eos pariatur", "isCorrect": true, "id": "A" },
+      { "option": "Exercitationem delen", "isCorrect": true, "id": "B" },
+      { "option": "Minim ea dolor elit", "isCorrect": false, "id": "C" },
+      { "option": "Eaque eos alias cupi", "isCorrect": true, "id": "D" }
+    ]
+  },
+  {
+    "question": "What is the capital of France?",
+    "explanation": "",
+    "options": [
+      { "option": "Berlin", "isCorrect": false, "id": "A" },
+      { "option": "Paris", "isCorrect": true, "id": "B" },
+      { "option": "Madrid", "isCorrect": false, "id": "C" },
+      { "option": "Rome", "isCorrect": false, "id": "D" }
+    ]
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "explanation": "",
+    "options": [
+      { "option": "Mars", "isCorrect": true, "id": "A" },
+      { "option": "Venus", "isCorrect": false, "id": "B" },
+      { "option": "Jupiter", "isCorrect": false, "id": "C" },
+      { "option": "Saturn", "isCorrect": false, "id": "D" }
+    ]
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "explanation": "",
+    "options": [
+      { "option": "Beijing", "isCorrect": false, "id": "A" },
+      { "option": "Seoul", "isCorrect": false, "id": "B" },
+      { "option": "Tokyo", "isCorrect": true, "id": "C" },
+      { "option": "Bangkok", "isCorrect": false, "id": "D" }
+    ]
+  },
+  {
+    "question": "Which of the following are prime numbers?",
+    "explanation": "",
+    "options": [
+      { "option": "8", "isCorrect": false, "id": "A" },
+      { "option": "17", "isCorrect": true, "id": "B" },
+      { "option": "4", "isCorrect": false, "id": "C" },
+      { "option": "23", "isCorrect": true, "id": "D" }
+    ]
+  },
+  {
+    "question": "What is the largest mammal on Earth?",
+    "explanation": "",
+    "options": [
+      { "option": "Elephant", "isCorrect": false, "id": "A" },
+      { "option": "Blue Whale", "isCorrect": true, "id": "B" },
+      { "option": "Giraffe", "isCorrect": false, "id": "C" },
+      { "option": "Lion", "isCorrect": false, "id": "D" }
+    ]
+  },
+  {
+    "question": "Is water composed of hydrogen and oxygen?",
+    "explanation": "",
+    "options": [
+      { "option": "True", "isCorrect": true, "id": "A" },
+      { "option": "False", "isCorrect": false, "id": "B" }
+    ]
+  },
+  {
+    "question": "Which of the following are primary colors?",
+    "explanation": "",
+    "options": [
+      { "option": "Red", "isCorrect": true, "id": "A" },
+      { "option": "Green", "isCorrect": true, "id": "B" },
+      { "option": "Blue", "isCorrect": true, "id": "C" },
+      { "option": "Yellow", "isCorrect": false, "id": "D" }
+    ]
+  },
+  {
+    "question": "In which year did World War II end?",
+    "explanation": "",
+    "options": [
+      { "option": "1945", "isCorrect": true, "id": "A" },
+      { "option": "1939", "isCorrect": false, "id": "B" },
+      { "option": "1941", "isCorrect": false, "id": "C" },
+      { "option": "1950", "isCorrect": false, "id": "D" }
+    ]
+  },
+  {
+    "question": "Which gas do plants absorb during photosynthesis?",
+    "explanation": "",
+    "options": [
+      { "option": "Oxygen", "isCorrect": false, "id": "A" },
+      { "option": "Carbon Dioxide", "isCorrect": true, "id": "B" },
+      { "option": "Nitrogen", "isCorrect": false, "id": "C" },
+      { "option": "Hydrogen", "isCorrect": false, "id": "D" }
+    ]
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "explanation": "",
+    "options": [
+      { "option": "Atlantic", "isCorrect": false, "id": "A" },
+      { "option": "Indian", "isCorrect": false, "id": "B" },
+      { "option": "Pacific", "isCorrect": true, "id": "C" },
+      { "option": "Arctic", "isCorrect": false, "id": "D" }
+    ]
+  },
+  {
+    "question": "Which is the smallest prime number?",
+    "explanation": "",
+    "options": [
+      { "option": "2", "isCorrect": true, "id": "A" },
+      { "option": "3", "isCorrect": false, "id": "B" },
+      { "option": "5", "isCorrect": false, "id": "C" },
+      { "option": "1", "isCorrect": false, "id": "D" }
+    ]
+  },
+  {
+    "question": "What is the main component of the Earth's atmosphere?",
+    "explanation": "",
+    "options": [
+      { "option": "Oxygen", "isCorrect": false, "id": "A" },
+      { "option": "Nitrogen", "isCorrect": true, "id": "B" },
+      { "option": "Carbon Dioxide", "isCorrect": false, "id": "C" },
+      { "option": "Argon", "isCorrect": false, "id": "D" }
+    ]
+  },
+  {
+    "question": "Which of the following are mammals?",
+    "explanation": "",
+    "options": [
+      { "option": "Snake", "isCorrect": false, "id": "A" },
+      { "option": "Dolphin", "isCorrect": true, "id": "B" },
+      { "option": "Crocodile", "isCorrect": false, "id": "C" },
+      { "option": "Eagle", "isCorrect": false, "id": "D" }
+    ]
+  },
+  {
+    "question": "Sun rises in the east?",
+    "explanation": "",
+    "options": [
+      { "option": "True", "isCorrect": true, "id": "A" },
+      { "option": "False", "isCorrect": false, "id": "B" }
+    ]
+  },
+  {
+    "question": "Delectus possimus ",
+    "explanation": "Nisi aut nobis numqu",
+    "options": [
+      { "option": "Dolore qui error lab", "isCorrect": false, "id": "A" },
+      { "option": "Qui at et omnis quae", "isCorrect": true, "id": "B" },
+      { "option": "Deserunt perferendis", "isCorrect": true, "id": "C" },
+      { "option": "Veniam ducimus in ", "isCorrect": false, "id": "D" },
+      { "option": "Fuga Dicta cillum e", "isCorrect": true, "id": "E" }
+    ]
+  },
+  {
+    "question": "Proident id vel obc",
+    "explanation": "Eligendi exercitatio",
+    "options": [
+      { "option": "Debitis saepe quis u", "isCorrect": false, "id": "A" },
+      { "option": "Non nulla exercitati", "isCorrect": false, "id": "B" },
+      { "option": "Quas dolor ipsa obc", "isCorrect": true, "id": "C" }
+    ]
+  },
+  {
+    "question": "Consequatur volupta",
+    "explanation": "Ut corporis aut qui ",
+    "options": [
+      { "option": "Sint aut at praesent", "isCorrect": false, "id": "A" },
+      { "option": "Nostrum eos exceptur", "isCorrect": true, "id": "B" },
+      { "option": "Enim provident labo", "isCorrect": true, "id": "C" },
+      { "option": "Sit voluptatibus et ", "isCorrect": false, "id": "D" }
+    ]
+  },
+  {
+    "question": "Et enim sint exercit",
+    "explanation": "Rerum aut voluptas q",
+    "options": [
+      { "option": "Sint in cumque qui ", "isCorrect": false, "id": "A" },
+      { "option": "Voluptas culpa ut si", "isCorrect": false, "id": "B" },
+      { "option": "Repellendus Irure e", "isCorrect": false, "id": "C" },
+      { "option": "Aut quis quas offici", "isCorrect": true, "id": "D" },
+      { "option": "Facilis mollit ad su", "isCorrect": false, "id": "E" },
+      { "option": "Hic ipsa perferendi", "isCorrect": true, "id": "F" }
+    ]
+  },
+  {
+    "question": "Adipisci error sunt",
+    "explanation": "Officia laboriosam ",
+    "options": [
+      { "option": "Et iure quia id aut ", "isCorrect": true, "id": "A" },
+      { "option": "Quis tempor dolor qu", "isCorrect": true, "id": "B" },
+      { "option": "Praesentium ipsa ut", "isCorrect": true, "id": "C" },
+      { "option": "Quam eu sint nulla e", "isCorrect": false, "id": "D" },
+      { "option": "Mollit voluptatem nu", "isCorrect": false, "id": "E" },
+      { "option": "Sunt et delectus an", "isCorrect": true, "id": "F" },
+      { "option": "Officiis eu soluta i", "isCorrect": true, "id": "G" },
+      { "option": "Optio laborum sunt ", "isCorrect": false, "id": "H" },
+      { "option": "Odit eos iusto aute", "isCorrect": true, "id": "I" },
+      { "option": "Voluptas ut laborum ", "isCorrect": false, "id": "J" }
+    ]
+  }
+]
